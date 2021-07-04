@@ -21,12 +21,14 @@ The raw input data for ilm model for dialogue is a text file with each line cont
 
 ## Commands 
 To convert dialogue data to masked versions which are then saved as pickle files, run
-``` python create_ilm_examples.py test data/char_masks/dailydialog --seed 0 --data_name dailydialog --data_split $SPLIT --mask_cls ilm.mask.hierarchical_dailydialog.MaskHierarchical --data_dir data/dailydialog 
+``` 
+python create_ilm_examples.py test data/char_masks/dailydialog --seed 0 --data_name dailydialog --data_split $SPLIT --mask_cls ilm.mask.hierarchical_dailydialog.MaskHierarchical --data_dir data/dailydialog 
 ```
 Here $SPLIT would be train, valid and test
 
 To preview masked spans created in the file above which will be used for training the ilm model, run
-``` python preview_ilm_examples_dailydialog.py data/char_masks/dailydialog/test.pkl
+``` 
+python preview_ilm_examples_dailydialog.py data/char_masks/dailydialog/test.pkl
 ```
 
 To train the model
